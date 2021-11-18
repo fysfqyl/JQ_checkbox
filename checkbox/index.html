@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/jQuery.checkbox.js"></script>
+</head>
+<body>
+    <form>
+        <h3 align="center">选择你喜欢的运动</h3>
+        <input type="checkbox" name="hobby" value="游泳">游泳
+        <input type="checkbox" name="hobby" value="足球">足球
+        <input type="checkbox" name="hobby" value="篮球">篮球
+        <input type="checkbox" name="hobby" value="滑冰">滑冰
+        <input type="checkbox" name="hobby" value="滑雪">滑雪
+        <input type="checkbox" name="hobby" value="乒乓球">乒乓球<br/><br/>
+        <input type="button" value="全选" id="checkALL">&nbsp;<input type="button" value="全不选" id="uncheckALL">&nbsp;
+        <input type="button" value="反选" id="revBtn">&nbsp;<input type="button" value="提交" id="subBtn">&nbsp;
+    </form>
+</body>
+</html>
+<script>
+    // $(function() {
+    //     //全选
+    //     $("#checkALL").click(function() {
+    //         $("input[type = checkbox]").prop("checked",true);
+    //     })
+    //     //全不选
+    //     $("#uncheckALL").click(function() {
+    //         $("input[type = checkbox]").removeAttr("checked");
+    //     })
+    //     //反选
+    //     $("#revBtn").click(function() {
+    //         $("input[type = checkbox]").each(function() {
+    //             this.checked = !this.checked;
+    //         });
+    //     })
+    //     //提交
+    //     $("#subBtn")
+    // })
+    var ele = $.checkBox('input:checkbox');
+    $('#checkALL').click(function() {
+        ele.checkAll();
+    });
+
+    $('#uncheckALL').click(function() {
+        ele.uncheckAll();
+    });
+
+    $('#revBtn').click(function() {
+        ele.reverseCheck();
+    });
+</script>
